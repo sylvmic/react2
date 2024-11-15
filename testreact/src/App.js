@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    (async function () {
+      const { text } = await( await fetch(`/api/httpTrigger1`)).json();
+      setData(text);
+    })();
+  });
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +25,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {data}
         </a>
       </header>
     </div>
