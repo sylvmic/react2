@@ -5,12 +5,12 @@ import React, { useState, useEffect } from 'react';
 function App() {
   const [data, setData] = useState('');
 
-  useEffect( async () => {
-    await fetch('/api/httpTrigger1')
-      .then(response => response.text())
-      .then(text => setData(text))
-      .catch(error => console.error(error));
-  }, []);
+  useEffect(() => {
+    (async function () {
+      const { text } = await( await fetch(`/api/httpTrigger1`)).text();
+      setData(text);
+    })();
+  });
 
   return (
     <div className="App">
