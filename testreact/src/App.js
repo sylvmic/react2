@@ -5,21 +5,19 @@ import React, { useState, useEffect } from 'react';
 function App() {
   const [data, setData] = useState('');
 
-  useEffect(() => {
-    fetch('/api/httpTrigger1')
+  useEffect( async () => {
+    await fetch('/api/httpTrigger1')
       .then(response => response.text())
       .then(text => setData(text))
       .catch(error => console.error(error));
   }, []);
-
-  const test = 'banane'
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. ghkghj {data} {test}
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
