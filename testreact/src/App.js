@@ -6,11 +6,11 @@ function App() {
   const [data, setData] = useState('');
 
   useEffect(() => {
-    (async function () {
-      const { text } = await( await fetch(`/api/httpTrigger1`)).text();
-      setData(text);
-    })();
-  });
+       fetch('/api/httpTrigger1')
+      .then(response => response.text())
+      .then(text => setData(text))
+      .catch(error => console.error(error));
+  }, []);
 
   return (
     <div className="App">
