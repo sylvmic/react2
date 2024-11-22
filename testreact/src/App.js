@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import blueprint from './blueprint.jpg';
 import gauge from './gauge.jpg';
 
@@ -8,6 +7,7 @@ import "./css/bootstrap.css";
 import React, { useState, useEffect } from 'react';
 
 function App() {
+  /*
   const [data, setData] = useState('');
 
   useEffect(() => {
@@ -16,6 +16,7 @@ function App() {
       .then(text => setData(text))
       .catch(error => console.error(error));
   }, []);
+*/
 
   return (
   <div>     
@@ -52,10 +53,10 @@ function App() {
             <div class="card-body">
               <h5 class="card-title">État du véhicule</h5>
               <div class="row">
-                <div class="col-md-12 align-self-center"><img src={blueprint} width="600" height="400"/></div>
+                <div class="col-md-12 align-self-center"><img src={blueprint} width="600" height="400" alt-text="bluprint"/></div>
               </div>
               <div class="row">
-                <div class="col-md-12 align-self-center"><img src={gauge} width="300" height="170"/></div>
+                <div class="col-md-12 align-self-center"><img src={gauge} width="300" height="170" alt-text="gauge"/></div>
               </div>
             </div>
           </div>
