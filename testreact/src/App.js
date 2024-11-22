@@ -4,7 +4,7 @@ import gauge from './gauge.jpg';
 import './App.css';
 // Then import Bootstrap
 import "./css/bootstrap.css";
-import React, { useState, useEffect } from 'react';
+//import React, { useState, useEffect } from 'react';
 
 function App() {
   /*
@@ -53,10 +53,10 @@ function App() {
             <div class="card-body">
               <h5 class="card-title">État du véhicule</h5>
               <div class="row">
-                <div class="col-md-12 align-self-center"><img src={blueprint} width="600" height="400" alt-text="bluprint"/></div>
+                <div class="col-md-12 align-self-center"><img src={blueprint} width="600" height="400" alt="bluprint"/></div>
               </div>
               <div class="row">
-                <div class="col-md-12 align-self-center"><img src={gauge} width="300" height="170" alt-text="gauge"/></div>
+                <div class="col-md-12 align-self-center"><img src={gauge} width="300" height="170" alt="gauge"/></div>
               </div>
             </div>
           </div>
